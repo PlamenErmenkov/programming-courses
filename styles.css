@@ -1,0 +1,131 @@
+:root {
+  --bg: #ffffff;
+  --text: #141210;
+  --primary: #99846b;
+  --secondary: #edbc8b;
+  --accent: #ff9900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100svh;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &  a {
+    text-decoration: none;
+    color: var(--bg);
+    font-weight: bold;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem;
+  /* height: 87%; */
+  /* align-items: stretch; */
+}
+
+aside {
+  width: clamp(10rem, 10svw, 20rem);
+  padding: 1rem;
+  background-color: var(--secondary);
+  border: 1px solid var(--primary);
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+  }
+  /* display: flex; */
+  /* align-items: stretch; */
+}
+
+section {
+  padding: 20px;
+  background-color: var(--secondary);
+  border: 1px solid var(--primary);
+}
+
+#hero {
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+#hero button {
+  padding: 10px 20px;
+  margin: 2rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+#hero button:hover {
+  background-color: darkorange;
+}
+
+/* .grid {
+    display: inline-grid;
+} */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto); */
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--bg);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* @media (max-width: 600px) {
+    aside {
+        width: 100%;
+        background-color: lightgray;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+} */
